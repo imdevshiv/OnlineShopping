@@ -8,17 +8,19 @@ import Checkout from './Components/CheckoutPage/checkoutPage';
 import PaymentSuccess from './Components/Payment/payment';
 import PaymentFailure from './Components/Payment/failure';
 import { CartProvider } from './contexts/CartContext'; 
+import Cart from './Components/Cart/cart';
 
 
 const App = () => {
   return (
     <CartProvider> 
       <Router>
-       
+       <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<ProductList />} />
           <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/payment-success" element={<PaymentSuccess />} />
           <Route path="/payment-failure" element={<PaymentFailure />} />
