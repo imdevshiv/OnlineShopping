@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar/navbar";
-import "./home.css";
-import "./Navbar/navbar.css";
-import { useCart } from "../../contexts/CartContext";
+import Navbar from "./Navbar/navbar"; // Assuming you have a Navbar component
+import "./home.css"; // Your CSS for Home
+import "./Navbar/navbar.css"; // Your CSS for Navbar
+import { useCart } from "../../contexts/CartContext"; // Assuming you have a CartContext
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -36,6 +36,7 @@ const Home = () => {
   };
 
   const handleBuyNow = (product) => {
+    // Navigate to checkout page with selected product
     navigate("/checkout", { state: { product } });
   };
 
